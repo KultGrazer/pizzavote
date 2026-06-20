@@ -2,6 +2,7 @@
 // ============================================================
 //  PizzaVote – Frontend
 //  Datei: index.php
+//  UI-Icons: Tabler Icons (MIT) – siehe THIRD_PARTY_LICENSES.md
 // ============================================================
 require_once __DIR__ . '/config.php';
 
@@ -138,7 +139,7 @@ if (!$order || $order['status'] !== 'active') {
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= htmlspecialchars(t('app.name')) ?></title>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍕</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23e8651a%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22><path d=%22M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983%22/><path d=%22M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479%22/><path d=%22M13 11.01v-.01%22/><path d=%22M11 14v-.01%22/></svg>">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -410,7 +411,7 @@ if (!$order || $order['status'] !== 'active') {
 <!-- ── NAME SCREEN ── -->
 <div id="nameScreen">
   <div class="name-card">
-    <span class="pizza-spin">🍕</span>
+    <span class="pizza-spin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983"/><path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"/><path d="M13 11.01v-.01"/><path d="M11 14v-.01"/></svg></span>
     <h1><?= htmlspecialchars(t('front.welcome.title')) ?></h1>
     <p><?= htmlspecialchars(t('front.welcome.subtitle')) ?></p>
     <form method="post">
@@ -418,7 +419,7 @@ if (!$order || $order['status'] !== 'active') {
         <input type="text" name="name" placeholder="<?= htmlspecialchars(t('common.name_placeholder')) ?>"
                maxlength="80" autocomplete="off" autofocus required />
       </div>
-      <button type="submit" class="btn-primary"><?= htmlspecialchars(t('front.welcome.continue')) ?></button>
+      <button type="submit" class="btn-primary"><?= htmlspecialchars(t('front.welcome.continue')) ?> <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M5 12l14 0"/><path d="M13 18l6 -6"/><path d="M13 6l6 6"/></svg></button>
     </form>
   </div>
 </div>
@@ -429,11 +430,11 @@ if (!$order || $order['status'] !== 'active') {
 
   <div class="page-top">
     <div class="page-brand">
-      <div class="brand-title">🍕 <?= htmlspecialchars(t('app.name')) ?></div>
+      <div class="brand-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983"/><path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"/><path d="M13 11.01v-.01"/><path d="M11 14v-.01"/></svg> <?= htmlspecialchars(t('app.name')) ?></div>
       <div class="user-chip" onclick="openRename()" title="<?= htmlspecialchars(t('front.rename.tooltip')) ?>">
         <div class="avatar" id="userAvatar"><?= htmlspecialchars(mb_strtoupper(mb_substr($user['name'],0,1))) ?></div>
         <span id="userName"><?= htmlspecialchars($user['name']) ?></span>
-        <span class="edit-hint">✎</span>
+        <span class="edit-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"/><path d="M13.5 6.5l4 4"/></svg></span>
       </div>
     </div>
 
@@ -471,14 +472,14 @@ if (!$order || $order['status'] !== 'active') {
         $cnt = 0; foreach ($lastOrderItems as $lr) { if ((int)$lr['product_id']===(int)$lp['product_id']) $cnt++; }
       ?>
       <div class="product-card frozen <?= $isMine ? 'frozen-mine' : '' ?>">
-        <?php if ($isMine): ?><div class="check-badge">&#x2713;</div><?php endif; ?>
+        <?php if ($isMine): ?><div class="check-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M5 12l5 5l10 -10"/></svg></div><?php endif; ?>
         <div class="frozen-count"><?= $cnt ?>&times;</div>
         <div class="product-img">
           <?php if (!empty($lp['image_url'])): ?>
             <img src="<?= htmlspecialchars($lp['image_url']) ?>"
                  alt="<?= htmlspecialchars($lp['product_name']) ?>" loading="lazy"
-                 onerror="this.parentElement.innerHTML='<div class=\'product-img-fallback\'>&#x1F355;</div>'" />
-          <?php else: ?><div class="product-img-fallback">&#x1F355;</div><?php endif; ?>
+                 onerror="this.parentElement.innerHTML='<div class=\'product-img-fallback\'>'+iconPizza+'</div>'" />
+          <?php else: ?><div class="product-img-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983"/><path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"/><path d="M13 11.01v-.01"/><path d="M11 14v-.01"/></svg></div><?php endif; ?>
         </div>
         <div class="product-info">
           <div class="product-name"><?= htmlspecialchars($lp['product_name']) ?></div>
@@ -502,7 +503,7 @@ if (!$order || $order['status'] !== 'active') {
 
     <?php else: ?>
     <div class="success-banner <?= $prevItem ? 'show' : '' ?>" id="successBanner">
-      <div class="s-icon">✅</div>
+      <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M9 12l2 2l4 -4"/></svg></div>
       <h3><?= htmlspecialchars(t('front.success.title')) ?></h3>
       <p><?= htmlspecialchars(t('front.success.body')) ?></p>
     </div>
@@ -516,14 +517,14 @@ if (!$order || $order['status'] !== 'active') {
       ?>
       <div class="product-card <?= $sel ? 'selected' : '' ?>"
            onclick="selectProduct(this)" data-id="<?= (int)$p['id'] ?>">
-        <div class="check-badge">✓</div>
+        <div class="check-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M5 12l5 5l10 -10"/></svg></div>
         <div class="product-img">
           <?php if (!empty($p['image_url'])): ?>
             <img src="<?= htmlspecialchars($p['image_url']) ?>"
                  alt="<?= htmlspecialchars($p['name']) ?>" loading="lazy"
-                 onerror="this.parentElement.innerHTML='<div class=\'product-img-fallback\'>🍕</div>'" />
+                 onerror="this.parentElement.innerHTML='<div class=\'product-img-fallback\'>'+iconPizza+'</div>'" />
           <?php else: ?>
-            <div class="product-img-fallback">🍕</div>
+            <div class="product-img-fallback"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983"/><path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"/><path d="M13 11.01v-.01"/><path d="M11 14v-.01"/></svg></div>
           <?php endif; ?>
         </div>
         <div class="product-info">
@@ -546,7 +547,7 @@ if (!$order || $order['status'] !== 'active') {
     </div>
 
     <button class="btn-submit" id="submitBtn" onclick="submitOrder()">
-      <span>🍕</span> <?= htmlspecialchars($prevItem ? t('front.submit.update') : t('front.submit.send')) ?>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983"/><path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"/><path d="M13 11.01v-.01"/><path d="M11 14v-.01"/></svg></span> <?= htmlspecialchars($prevItem ? t('front.submit.update') : t('front.submit.send')) ?>
     </button>
     <?php endif; ?>
 
@@ -567,6 +568,10 @@ const i18n = <?= json_encode([
   'save'          => t('common.save'),
 ], JSON_UNESCAPED_UNICODE) ?>;
 
+const iconPizza = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983"/><path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"/><path d="M13 11.01v-.01"/><path d="M11 14v-.01"/></svg>';
+const iconCheck = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M5 12l5 5l10 -10"/></svg>';
+const iconHourglass = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M6.5 7h11"/><path d="M6.5 17h11"/><path d="M6 20v-2a6 6 0 1 1 12 0v2a1 1 0 0 1 -1 1h-10a1 1 0 0 1 -1 -1"/><path d="M6 4v2a6 6 0 1 0 12 0v-2a1 1 0 0 0 -1 -1h-10a1 1 0 0 0 -1 1"/></svg>';
+
 let selectedCard = document.querySelector('.product-card.selected');
 let secondsLeft  = <?= $secondsLeft ?? 'null' ?>;
 const totalSeconds = <?= $totalSeconds ?? 'null' ?>;
@@ -584,7 +589,7 @@ function submitOrder() {
   const btn     = document.getElementById('submitBtn');
   const comment = document.getElementById('commentField').value;
   btn.disabled  = true;
-  btn.innerHTML = '⏳ ' + i18n.saving;
+  btn.innerHTML = iconHourglass + ' ' + i18n.saving;
   fetch('', {
     method: 'POST',
     headers: {'Content-Type': 'application/x-www-form-urlencoded'},
@@ -595,21 +600,21 @@ function submitOrder() {
     if (data.ok) {
       const b = document.getElementById('successBanner');
       if (b) { b.classList.add('show'); b.scrollIntoView({behavior:'smooth', block:'nearest'}); }
-      btn.innerHTML = i18n.saved;
+      btn.innerHTML = iconCheck + ' ' + i18n.saved;
       btn.style.background = 'linear-gradient(135deg,#4caf7d,#2e9e65)';
       btn.style.boxShadow  = '0 6px 24px rgba(76,175,125,.35)';
       setTimeout(() => {
         btn.disabled = false;
-        btn.innerHTML = '<span>🍕</span> ' + i18n.update;
+        btn.innerHTML = '<span>' + iconPizza + '</span> ' + i18n.update;
         btn.style.background = btn.style.boxShadow = '';
       }, 2000);
     } else {
       btn.disabled = false;
-      btn.innerHTML = '<span>🍕</span> ' + i18n.retry;
+      btn.innerHTML = '<span>' + iconPizza + '</span> ' + i18n.retry;
       alert(data.error || i18n.save_error);
     }
   })
-  .catch(() => { btn.disabled = false; btn.innerHTML = '<span>🍕</span> ' + i18n.network_error; });
+  .catch(() => { btn.disabled = false; btn.innerHTML = '<span>' + iconPizza + '</span> ' + i18n.network_error; });
 }
 
 // ── Timer ─────────────────────────────────────────────────────
@@ -686,10 +691,10 @@ document.addEventListener('keydown', function(e) {
 <!-- Rename Modal -->
 <div class="rename-modal-overlay" id="renameModal" onclick="if(event.target===this)closeRename()">
   <div class="rename-modal">
-    <h3><?= htmlspecialchars(t('front.rename.title')) ?></h3>
+    <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4"/><path d="M13.5 6.5l4 4"/></svg> <?= htmlspecialchars(t('front.rename.title')) ?></h3>
     <input type="text" id="renameInput" placeholder="<?= htmlspecialchars(t('common.name_placeholder')) ?>" maxlength="80"
            onkeydown="if(event.key==='Enter')saveRename()" />
-    <div class="rename-info">ℹ️ <span><?= htmlspecialchars(t('front.rename.ip_info', ['ip' => $ip])) ?></span></div>
+    <div class="rename-info"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;flex-shrink:0;margin-top:.15em"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 9h.01"/><path d="M11 12h1v4h1"/></svg> <span><?= htmlspecialchars(t('front.rename.ip_info', ['ip' => $ip])) ?></span></div>
     <div class="rename-modal-footer">
       <button class="btn-modal-cancel" onclick="closeRename()"><?= htmlspecialchars(t('common.cancel')) ?></button>
       <button class="btn-modal-save" id="renameSaveBtn" onclick="saveRename()"><?= htmlspecialchars(t('common.save')) ?></button>

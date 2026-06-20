@@ -151,6 +151,11 @@ The interface (labels, buttons, messages) supports German and English:
   line) — a publicly known default credential. **Change it before any real use**, or
   remove the folder entirely if you don't need it.
 
+## Credits
+
+UI icons are from [Tabler Icons](https://tabler.io/icons) (MIT license) — see
+[THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md).
+
 ## License
 
 MIT — see [LICENSE](LICENSE).

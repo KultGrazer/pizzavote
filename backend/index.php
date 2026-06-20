@@ -2,6 +2,7 @@
 // ============================================================
 //  PizzaVote – Backend / Admin
 //  Datei: backend/index.php
+//  UI-Icons: Tabler Icons (MIT) – siehe ../THIRD_PARTY_LICENSES.md
 // ============================================================
 require_once __DIR__ . '/../config.php';
 
@@ -259,7 +260,7 @@ function showLogin(bool $error): void { ?>
   .err{color:#e05555;font-size:.88rem;margin-bottom:14px}
 </style></head><body>
 <div class="card">
-  <h1>🍕 <?= htmlspecialchars(t('admin.brand')) ?></h1>
+  <h1><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983"/><path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"/><path d="M13 11.01v-.01"/><path d="M11 14v-.01"/></svg> <?= htmlspecialchars(t('admin.brand')) ?></h1>
   <?php if ($error): ?><div class="err"><?= htmlspecialchars(t('admin.login.wrong_password')) ?></div><?php endif; ?>
   <form method="post">
     <input type="password" name="pw" placeholder="<?= htmlspecialchars(t('admin.login.password_placeholder')) ?>" autofocus required />
@@ -383,15 +384,15 @@ function showLogin(bool $error): void { ?>
 <div class="layout">
 
   <aside class="sidebar">
-    <div class="sidebar-logo">🍕 <?= htmlspecialchars(t('admin.brand')) ?></div>
+    <div class="sidebar-logo"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983"/><path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"/><path d="M13 11.01v-.01"/><path d="M11 14v-.01"/></svg> <?= htmlspecialchars(t('admin.brand')) ?></div>
     <a class="nav-item <?= !isset($_GET['page'])||$_GET['page']==='orders'?'active':'' ?>" href="?page=orders">
-      <span class="icon">📋</span> <?= htmlspecialchars(t('admin.nav.orders')) ?>
+      <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"/><path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2"/><path d="M9 12l.01 0"/><path d="M13 12l2 0"/><path d="M9 16l.01 0"/><path d="M13 16l2 0"/></svg></span> <?= htmlspecialchars(t('admin.nav.orders')) ?>
     </a>
     <a class="nav-item <?= ($_GET['page']??'')==='products'?'active':'' ?>" href="?page=products">
-      <span class="icon">🍕</span> <?= htmlspecialchars(t('admin.nav.products')) ?>
+      <span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983"/><path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"/><path d="M13 11.01v-.01"/><path d="M11 14v-.01"/></svg></span> <?= htmlspecialchars(t('admin.nav.products')) ?>
     </a>
     <div class="sidebar-bottom">
-      <a class="nav-item logout" href="?logout=1"><span class="icon">🚪</span> <?= htmlspecialchars(t('admin.nav.logout')) ?></a>
+      <a class="nav-item logout" href="?logout=1"><span class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2"/><path d="M9 12h12l-3 -3"/><path d="M18 15l3 -3"/></svg></span> <?= htmlspecialchars(t('admin.nav.logout')) ?></a>
     </div>
   </aside>
 
@@ -421,9 +422,9 @@ function showLogin(bool $error): void { ?>
             <input type="datetime-local" name="deadline" id="deadlineInput" />
           </div>
         </div>
-        <button type="submit" class="btn btn-accent"><?= htmlspecialchars(t('admin.orders.start_btn')) ?></button>
+        <button type="submit" class="btn btn-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M7 4v16l13 -8l-13 -8"/></svg> <?= htmlspecialchars(t('admin.orders.start_btn')) ?></button>
         <?php if ($activeOrder): ?>
-        &nbsp;<small style="color:var(--muted)"><?= htmlspecialchars(t('admin.orders.start_warning')) ?></small>
+        &nbsp;<small style="color:var(--muted)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M12 9v4"/><path d="M10.363 3.591l-8.106 13.534a1.914 1.914 0 0 0 1.636 2.871h16.214a1.914 1.914 0 0 0 1.636 -2.87l-8.106 -13.536a1.914 1.914 0 0 0 -3.274 0"/><path d="M12 16h.01"/></svg> <?= htmlspecialchars(t('admin.orders.start_warning')) ?></small>
         <?php endif; ?>
       </form>
     </div>
@@ -456,7 +457,11 @@ function showLogin(bool $error): void { ?>
         <div>
           <strong style="font-size:1.1rem"><?= htmlspecialchars($displayOrder['title']) ?></strong>
           <span class="badge badge-<?= $displayOrder['status'] === 'active' ? 'active' : 'closed' ?>" style="margin-left:10px">
-            <?= $displayOrder['status'] === 'active' ? htmlspecialchars(t('admin.orders.badge_active')) : htmlspecialchars(t('admin.orders.badge_closed')) ?>
+            <?php if ($displayOrder['status'] === 'active'): ?>
+              <?= htmlspecialchars(t('admin.orders.badge_active')) ?>
+            <?php else: ?>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M5 12l5 5l10 -10"/></svg> <?= htmlspecialchars(t('admin.orders.badge_closed')) ?>
+            <?php endif; ?>
           </span><br>
           <small style="color:var(--muted)">
             <?= htmlspecialchars(t('admin.orders.deadline_label')) ?> <?= $displayOrder['deadline'] ? date('d.m.Y H:i', strtotime($displayOrder['deadline'])) : '–' ?>
@@ -464,29 +469,29 @@ function showLogin(bool $error): void { ?>
           </small>
         </div>
         <div class="actions no-print">
-          <button class="btn btn-ghost btn-sm" onclick="window.print()"><?= htmlspecialchars(t('admin.orders.print_btn')) ?></button>
+          <button class="btn btn-ghost btn-sm" onclick="window.print()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2"/><path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4"/><path d="M7 15a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2l0 -4"/></svg> <?= htmlspecialchars(t('admin.orders.print_btn')) ?></button>
           <button class="btn btn-ghost btn-sm" onclick="openEditOrder(
             <?= (int)$displayOrder['id'] ?>,
             '<?= htmlspecialchars(addslashes($displayOrder['title'])) ?>',
             '<?= $displayOrder['deadline'] ? date('Y-m-d\TH:i', strtotime($displayOrder['deadline'])) : '' ?>'
-          )">✏️ <?= htmlspecialchars(t('common.edit')) ?></button>
+          )"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"/><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415"/><path d="M16 5l3 3"/></svg> <?= htmlspecialchars(t('common.edit')) ?></button>
           <?php if ($displayOrder['status'] === 'active'): ?>
           <form method="post" style="display:inline" onsubmit="return confirm('<?= addslashes(t('admin.confirm.close_order')) ?>')">
             <input type="hidden" name="action" value="close_order" />
             <input type="hidden" name="order_id" value="<?= (int)$displayOrder['id'] ?>" />
-            <button type="submit" class="btn btn-success btn-sm"><?= htmlspecialchars(t('admin.orders.close_btn')) ?></button>
+            <button type="submit" class="btn btn-success btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M5 13a2 2 0 0 1 2 -2h10a2 2 0 0 1 2 2v6a2 2 0 0 1 -2 2h-10a2 2 0 0 1 -2 -2v-6"/><path d="M11 16a1 1 0 1 0 2 0a1 1 0 0 0 -2 0"/><path d="M8 11v-4a4 4 0 1 1 8 0v4"/></svg> <?= htmlspecialchars(t('admin.orders.close_btn')) ?></button>
           </form>
           <?php else: ?>
           <form method="post" style="display:inline" onsubmit="return confirm('<?= addslashes(t('admin.confirm.reactivate_order')) ?>')">
             <input type="hidden" name="action" value="reactivate_order" />
             <input type="hidden" name="order_id" value="<?= (int)$displayOrder['id'] ?>" />
-            <button type="submit" class="btn btn-success btn-sm"><?= htmlspecialchars(t('admin.orders.reactivate_btn')) ?></button>
+            <button type="submit" class="btn btn-success btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M7 4v16l13 -8l-13 -8"/></svg> <?= htmlspecialchars(t('admin.orders.reactivate_btn')) ?></button>
           </form>
           <?php endif; ?>
           <form method="post" style="display:inline" onsubmit="return confirm('<?= addslashes(t('admin.confirm.delete_order')) ?>')">
             <input type="hidden" name="action" value="delete_order" />
             <input type="hidden" name="order_id" value="<?= (int)$displayOrder['id'] ?>" />
-            <button type="submit" class="btn btn-danger btn-sm btn-icon">🗑</button>
+            <button type="submit" class="btn btn-danger btn-sm btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M4 7l16 0"/><path d="M10 11l0 6"/><path d="M14 11l0 6"/><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"/><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"/></svg></button>
           </form>
         </div>
       </div>
@@ -555,24 +560,24 @@ function showLogin(bool $error): void { ?>
               <td style="color:var(--muted);font-size:.82rem"><?= $o['deadline'] ? date('d.m. H:i', strtotime($o['deadline'])) : '–' ?></td>
               <td>
                 <div class="actions">
-                  <a href="?page=orders&order=<?= (int)$o['id'] ?>" class="btn btn-ghost btn-sm">📋</a>
-                  <a href="?page=orders&order=<?= (int)$o['id'] ?>&print=1" class="btn btn-ghost btn-sm btn-icon" title="<?= htmlspecialchars(t('admin.orders.print_btn')) ?>">🖨️</a>
+                  <a href="?page=orders&order=<?= (int)$o['id'] ?>" class="btn btn-ghost btn-sm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M9 5h-2a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-12a2 2 0 0 0 -2 -2h-2"/><path d="M9 5a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2a2 2 0 0 1 -2 2h-2a2 2 0 0 1 -2 -2"/><path d="M9 12l.01 0"/><path d="M13 12l2 0"/><path d="M9 16l.01 0"/><path d="M13 16l2 0"/></svg></a>
+                  <a href="?page=orders&order=<?= (int)$o['id'] ?>&print=1" class="btn btn-ghost btn-sm btn-icon" title="<?= htmlspecialchars(t('admin.orders.print_btn')) ?>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M17 17h2a2 2 0 0 0 2 -2v-4a2 2 0 0 0 -2 -2h-14a2 2 0 0 0 -2 2v4a2 2 0 0 0 2 2h2"/><path d="M17 9v-4a2 2 0 0 0 -2 -2h-6a2 2 0 0 0 -2 2v4"/><path d="M7 15a2 2 0 0 1 2 -2h6a2 2 0 0 1 2 2v4a2 2 0 0 1 -2 2h-6a2 2 0 0 1 -2 -2l0 -4"/></svg></a>
                   <button class="btn btn-ghost btn-sm btn-icon" onclick="openEditOrder(
                     <?= (int)$o['id'] ?>,
                     '<?= htmlspecialchars(addslashes($o['title'])) ?>',
                     '<?= $o['deadline'] ? date('Y-m-d\TH:i', strtotime($o['deadline'])) : '' ?>'
-                  )">✏️</button>
+                  )"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"/><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415"/><path d="M16 5l3 3"/></svg></button>
                   <?php if ($o['status'] !== 'active'): ?>
                   <form method="post" style="display:inline" onsubmit="return confirm('<?= addslashes(t('admin.confirm.reactivate_order')) ?>')">
                     <input type="hidden" name="action" value="reactivate_order" />
                     <input type="hidden" name="order_id" value="<?= (int)$o['id'] ?>" />
-                    <button type="submit" class="btn btn-success btn-sm btn-icon" title="<?= htmlspecialchars(t('admin.orders.reactivate_tooltip')) ?>">▶</button>
+                    <button type="submit" class="btn btn-success btn-sm btn-icon" title="<?= htmlspecialchars(t('admin.orders.reactivate_tooltip')) ?>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M7 4v16l13 -8l-13 -8"/></svg></button>
                   </form>
                   <?php endif; ?>
                   <form method="post" style="display:inline" onsubmit="return confirm('<?= addslashes(t('admin.confirm.delete_order')) ?>')">
                     <input type="hidden" name="action" value="delete_order" />
                     <input type="hidden" name="order_id" value="<?= (int)$o['id'] ?>" />
-                    <button type="submit" class="btn btn-danger btn-sm btn-icon">🗑</button>
+                    <button type="submit" class="btn btn-danger btn-sm btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M4 7l16 0"/><path d="M10 11l0 6"/><path d="M14 11l0 6"/><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"/><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"/></svg></button>
                   </form>
                 </div>
               </td>
@@ -648,18 +653,22 @@ function showLogin(bool $error): void { ?>
                     '<?= number_format((float)$p['price'],2,'.','.') ?>',
                     '<?= htmlspecialchars(addslashes($p['image_url'])) ?>',
                     <?= (int)$p['sort_order'] ?>
-                  )">✏️</button>
+                  )"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"/><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415"/><path d="M16 5l3 3"/></svg></button>
                   <form method="post" style="display:inline">
                     <input type="hidden" name="action" value="toggle_product" />
                     <input type="hidden" name="product_id" value="<?= (int)$p['id'] ?>" />
                     <button type="submit" class="btn btn-ghost btn-sm btn-icon" title="<?= $p['active']?htmlspecialchars(t('admin.products.hide_tooltip')):htmlspecialchars(t('admin.products.show_tooltip')) ?>">
-                      <?= $p['active']?'🙈':'👁' ?>
+                      <?php if ($p['active']): ?>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M10.585 10.587a2 2 0 0 0 2.829 2.828"/><path d="M16.681 16.673a8.717 8.717 0 0 1 -4.681 1.327c-3.6 0 -6.6 -2 -9 -6c1.272 -2.12 2.712 -3.678 4.32 -4.674m2.86 -1.146a9.055 9.055 0 0 1 1.82 -.18c3.6 0 6.6 2 9 6c-.666 1.11 -1.379 2.067 -2.138 2.87"/><path d="M3 3l18 18"/></svg>
+                      <?php else: ?>
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0"/><path d="M21 12c-2.4 4 -5.4 6 -9 6c-3.6 0 -6.6 -2 -9 -6c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6"/></svg>
+                      <?php endif; ?>
                     </button>
                   </form>
                   <form method="post" style="display:inline" onsubmit="return confirm('<?= addslashes(t('admin.confirm.delete_product')) ?>')">
                     <input type="hidden" name="action" value="delete_product" />
                     <input type="hidden" name="product_id" value="<?= (int)$p['id'] ?>" />
-                    <button type="submit" class="btn btn-danger btn-sm btn-icon" title="<?= htmlspecialchars(t('common.delete')) ?>">🗑</button>
+                    <button type="submit" class="btn btn-danger btn-sm btn-icon" title="<?= htmlspecialchars(t('common.delete')) ?>"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M4 7l16 0"/><path d="M10 11l0 6"/><path d="M14 11l0 6"/><path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"/><path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"/></svg></button>
                   </form>
                 </div>
               </td>
@@ -678,8 +687,8 @@ function showLogin(bool $error): void { ?>
 <div class="modal-overlay" id="modalOrder" onclick="if(event.target===this)closeModal('modalOrder')">
   <div class="modal">
     <div class="modal-header">
-      <div class="modal-title"><?= htmlspecialchars(t('admin.orders.edit_modal_title')) ?></div>
-      <button class="modal-close" onclick="closeModal('modalOrder')">✕</button>
+      <div class="modal-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"/><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415"/><path d="M16 5l3 3"/></svg> <?= htmlspecialchars(t('admin.orders.edit_modal_title')) ?></div>
+      <button class="modal-close" onclick="closeModal('modalOrder')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M18 6l-12 12"/><path d="M6 6l12 12"/></svg></button>
     </div>
     <form method="post">
       <input type="hidden" name="action" value="edit_order" />
@@ -698,7 +707,7 @@ function showLogin(bool $error): void { ?>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-ghost" onclick="closeModal('modalOrder')"><?= htmlspecialchars(t('common.cancel')) ?></button>
-        <button type="submit" class="btn btn-accent">💾 <?= htmlspecialchars(t('common.save')) ?></button>
+        <button type="submit" class="btn btn-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2"/><path d="M10 14a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M14 4l0 4l-6 0l0 -4"/></svg> <?= htmlspecialchars(t('common.save')) ?></button>
       </div>
     </form>
   </div>
@@ -708,8 +717,8 @@ function showLogin(bool $error): void { ?>
 <div class="modal-overlay" id="modalProduct" onclick="if(event.target===this)closeModal('modalProduct')">
   <div class="modal">
     <div class="modal-header">
-      <div class="modal-title"><?= htmlspecialchars(t('admin.products.edit_modal_title')) ?></div>
-      <button class="modal-close" onclick="closeModal('modalProduct')">✕</button>
+      <div class="modal-title"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M7 7h-1a2 2 0 0 0 -2 2v9a2 2 0 0 0 2 2h9a2 2 0 0 0 2 -2v-1"/><path d="M20.385 6.585a2.1 2.1 0 0 0 -2.97 -2.97l-8.415 8.385v3h3l8.385 -8.415"/><path d="M16 5l3 3"/></svg> <?= htmlspecialchars(t('admin.products.edit_modal_title')) ?></div>
+      <button class="modal-close" onclick="closeModal('modalProduct')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M18 6l-12 12"/><path d="M6 6l12 12"/></svg></button>
     </div>
     <form method="post" enctype="multipart/form-data">
       <input type="hidden" name="action" value="edit_product" />
@@ -751,7 +760,7 @@ function showLogin(bool $error): void { ?>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-ghost" onclick="closeModal('modalProduct')"><?= htmlspecialchars(t('common.cancel')) ?></button>
-        <button type="submit" class="btn btn-accent">💾 <?= htmlspecialchars(t('common.save')) ?></button>
+        <button type="submit" class="btn btn-accent"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em;vertical-align:-0.125em"><path d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2"/><path d="M10 14a2 2 0 1 0 4 0a2 2 0 1 0 -4 0"/><path d="M14 4l0 4l-6 0l0 -4"/></svg> <?= htmlspecialchars(t('common.save')) ?></button>
       </div>
     </form>
   </div>
