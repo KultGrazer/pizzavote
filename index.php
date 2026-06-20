@@ -411,7 +411,7 @@ if (!$order || $order['status'] !== 'active') {
 <!-- ── NAME SCREEN ── -->
 <div id="nameScreen">
   <div class="name-card">
-    <span class="pizza-spin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:1em;height:1em"><path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983"/><path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479"/><path d="M13 11.01v-.01"/><path d="M11 14v-.01"/></svg></span>
+    <span class="pizza-spin"><img src="img/favicon.png" alt="" style="width:1em;height:1em"></span>
     <h1><?= htmlspecialchars(t('front.welcome.title')) ?></h1>
     <p><?= htmlspecialchars(t('front.welcome.subtitle')) ?></p>
     <form method="post">
