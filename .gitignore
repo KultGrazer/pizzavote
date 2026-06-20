@@ -1,0 +1,3 @@
+# Laufzeit-Datenbank — enthält echte Nutzerdaten (Namen, IP-Adressen) und wird
+# automatisch von config.php angelegt. Niemals committen.
+data/
