@@ -41,6 +41,7 @@
   "front.js.order_closed": "Order closed",
   "front.js.error_generic": "Error",
   "front.rename.title": "✎ Change name",
+  "front.rename.ip_info": "You're automatically identified by your IP address: {ip}",
   "front.error.invalid_product": "Invalid product",
   "front.error.empty_name": "Name is empty",
   "front.error.invalid_request": "Invalid request",

@@ -360,6 +360,12 @@ if (!$order || $order['status'] !== 'active') {
     transition: border-color .2s;
   }
   .rename-modal input:focus { border-color: var(--accent); }
+  .rename-info {
+    display: flex; align-items: flex-start; gap: 8px;
+    background: rgba(232,101,26,.08); border: 1px solid rgba(232,101,26,.2);
+    border-radius: 10px; padding: 10px 14px; margin-bottom: 16px;
+    font-size: .82rem; color: var(--muted); line-height: 1.4;
+  }
   .rename-modal-footer { display: flex; gap: 10px; justify-content: flex-end; }
   .btn-modal-cancel { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; color: var(--text); cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: .9rem; padding: 10px 18px; }
   .btn-modal-save { background: var(--accent); border: none; border-radius: 10px; color: #fff; cursor: pointer; font-family: 'DM Sans', sans-serif; font-size: .9rem; font-weight: 500; padding: 10px 18px; box-shadow: 0 4px 16px rgba(232,101,26,.3); }
@@ -683,6 +689,7 @@ document.addEventListener('keydown', function(e) {
     <h3><?= htmlspecialchars(t('front.rename.title')) ?></h3>
     <input type="text" id="renameInput" placeholder="<?= htmlspecialchars(t('common.name_placeholder')) ?>" maxlength="80"
            onkeydown="if(event.key==='Enter')saveRename()" />
+    <div class="rename-info">ℹ️ <span><?= htmlspecialchars(t('front.rename.ip_info', ['ip' => $ip])) ?></span></div>
     <div class="rename-modal-footer">
       <button class="btn-modal-cancel" onclick="closeRename()"><?= htmlspecialchars(t('common.cancel')) ?></button>
       <button class="btn-modal-save" id="renameSaveBtn" onclick="saveRename()"><?= htmlspecialchars(t('common.save')) ?></button>

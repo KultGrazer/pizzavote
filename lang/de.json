@@ -41,6 +41,7 @@
   "front.js.order_closed": "Bestellung abgeschlossen",
   "front.js.error_generic": "Fehler",
   "front.rename.title": "✎ Namen ändern",
+  "front.rename.ip_info": "Anmeldung erfolgt automatisch über deine IP-Adresse: {ip}",
   "front.error.invalid_product": "Ungültiges Produkt",
   "front.error.empty_name": "Name leer",
   "front.error.invalid_request": "Ungültige Anfrage",
