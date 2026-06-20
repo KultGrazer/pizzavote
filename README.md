@@ -127,7 +127,8 @@ The interface (labels, buttons, messages) supports German and English:
 - The language is chosen **statically** via `define('APP_LANG', 'de');` in `config.php`
   — there's no language switcher for end users in the UI.
 - To add a new language: create `lang/<code>.json` with the same keys as
-  `lang/de.json`.
+  `lang/de.json` — see **[TRANSLATIONS.md](TRANSLATIONS.md)** for a step-by-step guide
+  (no PHP knowledge needed, contributions welcome!).
 - **Not** translated: product names, descriptions, and comments — they stay exactly as
   entered in the database/admin panel.
 
